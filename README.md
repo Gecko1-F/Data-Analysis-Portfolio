@@ -1,2 +1,2 @@
-# GeckoData_Analis.github.io
+# GeckoData_Analysis.github.io
 Data Analytics Portfolio
