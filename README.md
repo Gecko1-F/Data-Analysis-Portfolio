@@ -21,7 +21,7 @@ Data Analytics portfolio showcasing projects in:
 ## Projects Featured
 
 1. **Lamborghini Sales** — Brief description
-2. **Obesity in Mexico *(2019)** — Brief description
+2. **Obesity in Mexico (2019)** — Brief description
 3. **Constoso Sales** — Brief description
 
 ## Contact
