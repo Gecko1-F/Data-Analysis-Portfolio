@@ -31,4 +31,4 @@ Data Analytics portfolio showcasing projects in:
 
 ---
 
-© 2026 Your Name. All rights reserved.
+© 2026 Gecko1-F. All rights reserved.
