@@ -1,0 +1,448 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- CHARACTER ENCODING & VIEWPORT               -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- 
+      WHAT: Tells the browser how to read your text and 
+            how to size the page on different screens.
+      WHY:  Without UTF-8, special characters break.
+            Without viewport, mobile phones show tiny text.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- SECURITY HEADERS (from Step 6)              -->
+    <!-- ═══════════════════════════════════════════ -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        frame-src https://public.tableau.com https://app.powerbi.com https://lookerstudio.google.com https://datastudio.google.com;
+        connect-src 'self' https://formsubmit.co;
+    ">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- SEO (Search Engine Optimization)            -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!--
+      WHAT: Helps Google and LinkedIn understand your page.
+      WHY:  When someone Googles your name or shares your link,
+            this info determines what appears.
+    -->
+    <title>Your Name — Data Analytics Portfolio</title>
+    <meta name="description" content="Data Analytics portfolio featuring 
+        Tableau, Power BI, and Looker Studio dashboards. 
+        Specializing in data visualization and business intelligence.">
+    <meta name="author" content="Your Name">
+
+    <!-- Open Graph tags (for LinkedIn/social media previews) -->
+    <meta property="og:title" content="Your Name — Data Analytics Portfolio">
+    <meta property="og:description" content="Data Analytics portfolio featuring 
+        interactive dashboards and data visualizations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/">
+    <meta property="og:image" content="https://yourusername.github.io/images/profile/og-image.webp">
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- FAVICON                                     -->
+    <!-- ═══════════════════════════════════════════ -->
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- FONTS (Google Fonts — free)                 -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!--
+      WHAT: Professional fonts from Google's free CDN.
+      WHY:  Default browser fonts look unprofessional.
+      
+      preconnect: Tells the browser to start connecting to
+      Google's servers early, so fonts load faster.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- YOUR STYLESHEET                             -->
+    <!-- ═══════════════════════════════════════════ -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- SKIP NAVIGATION LINK (Accessibility)        -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!--
+      WHAT: Hidden link that appears when Tab is pressed.
+      WHY:  Screen reader users and keyboard-only users can
+            skip the navigation and jump straight to content.
+            This is an accessibility best practice (WCAG).
+    -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- NAVIGATION BAR                              -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!--
+      WHAT: The menu bar at the top of every page.
+      WHY:  Lets visitors navigate between pages.
+      
+      <nav> tag: Semantic HTML — tells screen readers 
+      "this is navigation." Better than using <div>.
+      
+      aria-label: Tells screen readers what this nav is for.
+    -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <!-- Logo/Name -->
+            <a href="index.html" class="nav-logo" aria-label="Home">
+                <!-- You can use text or an SVG logo -->
+                <span class="logo-text">YN</span>
+                <span class="logo-full">Your Name</span>
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li>
+                    <a href="docs/resume.pdf" class="nav-link nav-cta" 
+                       target="_blank" 
+                       rel="noopener noreferrer">
+                        Resume ↗
+                    </a>
+                </li>
+            </ul>
+
+            <!-- 
+              Mobile Menu Button (Hamburger)
+              ──────────────────────────────
+              WHAT: Three-line icon that appears on small screens.
+              WHY:  Full navigation doesn't fit on phone screens.
+              
+              aria-expanded: Tells screen readers if menu is open/closed.
+              aria-controls: Points to the element this button controls.
+            -->
+            <button class="nav-toggle" 
+                    id="navToggle" 
+                    aria-expanded="false" 
+                    aria-controls="navLinks"
+                    aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- HERO SECTION (Main Banner)                  -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!--
+      WHAT: The large, eye-catching section at the top.
+      WHY:  First impression — visitors decide in 3 seconds 
+            whether to stay or leave.
+      
+      id="main-content": This is where the skip-link jumps to.
+    -->
+    <main id="main-content">
+        <section class="hero" aria-label="Introduction">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <!-- Greeting with subtle animation -->
+                    <p class="hero-greeting">Hello, I'm</p>
+
+                    <!-- Your name — the biggest text on the page -->
+                    <h1 class="hero-title">Your Name</h1>
+
+                    <!-- Your role/tagline -->
+                    <p class="hero-subtitle">
+                        Data Analyst & BI Developer
+                    </p>
+
+                    <!-- Brief description -->
+                    <p class="hero-description">
+                        I transform raw data into clear, actionable insights 
+                        through interactive dashboards and compelling 
+                        visualizations. Specializing in 
+                        <strong>Tableau</strong>, <strong>Power BI</strong>, 
+                        and <strong>SQL</strong>.
+                    </p>
+
+                    <!-- Call-to-action buttons -->
+                    <div class="hero-buttons">
+                        <a href="projects.html" class="btn btn-primary">
+                            View My Work
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary">
+                            Get In Touch
+                        </a>
+                    </div>
+
+                    <!-- Tool badges -->
+                    <div class="hero-tools" aria-label="Tools I use">
+                        <span class="tool-badge">Tableau</span>
+                        <span class="tool-badge">Power BI</span>
+                        <span class="tool-badge">SQL</span>
+                        <span class="tool-badge">Python</span>
+                        <span class="tool-badge">Looker Studio</span>
+                        <span class="tool-badge">Excel</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- FEATURED PROJECTS SECTION                   -->
+        <!-- ═══════════════════════════════════════════ -->
+        <!--
+          WHAT: Preview cards of your best 3 projects.
+          WHY:  Gives visitors a quick taste without 
+                having to navigate to the projects page.
+        -->
+        <section class="featured-projects" aria-label="Featured projects">
+            <div class="section-container">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">
+                    A selection of my recent data analytics work
+                </p>
+
+                <div class="projects-grid">
+                    <!-- PROJECT CARD 1 -->
+                    <article class="project-card">
+                        <div class="card-image">
+                            <img src="images/projects/project1-thumb.webp" 
+                                 alt="Screenshot of Sales Performance Dashboard 
+                                      showing revenue trends and KPI metrics"
+                                 loading="lazy"
+                                 width="600" 
+                                 height="400">
+                            <!--
+                              loading="lazy": Don't load image until user 
+                              scrolls near it. Saves bandwidth.
+                              
+                              width/height: Prevents layout shift while 
+                              image loads. Browser reserves space.
+                              
+                              alt: Descriptive text for screen readers 
+                              and when images fail to load. Be specific!
+                            -->
+                            <span class="card-tool-tag">Tableau</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Sales Performance Dashboard</h3>
+                            <p class="card-description">
+                                Interactive Tableau dashboard analyzing $2.3M in 
+                                sales data across 4 regions, identifying a 23% 
+                                revenue opportunity in underperforming segments.
+                            </p>
+                            <div class="card-tags">
+                                <span class="tag">Tableau</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">Data Cleaning</span>
+                            </div>
+                            <a href="projects.html#project-sales" 
+                               class="card-link">
+                                View Case Study →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT CARD 2 -->
+                    <article class="project-card">
+                        <div class="card-image">
+                            <img src="images/projects/project2-thumb.webp" 
+                                 alt="Screenshot of HR Analytics Dashboard 
+                                      showing employee turnover analysis"
+                                 loading="lazy"
+                                 width="600" 
+                                 height="400">
+                            <span class="card-tool-tag">Power BI</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">HR Analytics Dashboard</h3>
+                            <p class="card-description">
+                                Power BI report analyzing employee turnover 
+                                patterns, revealing that remote workers had 
+                                34% higher retention rates.
+                            </p>
+                            <div class="card-tags">
+                                <span class="tag">Power BI</span>
+                                <span class="tag">DAX</span>
+                                <span class="tag">HR Analytics</span>
+                            </div>
+                            <a href="projects.html#project-hr" 
+                               class="card-link">
+                                View Case Study →
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT CARD 3 -->
+                    <article class="project-card">
+                        <div class="card-image">
+                            <img src="images/projects/project3-thumb.webp" 
+                                 alt="Screenshot of Marketing ROI report 
+                                      showing campaign performance metrics"
+                                 loading="lazy"
+                                 width="600" 
+                                 height="400">
+                            <span class="card-tool-tag">Looker Studio</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Marketing ROI Report</h3>
+                            <p class="card-description">
+                                Google Looker Studio report tracking marketing 
+                                spend vs. conversions, optimizing budget 
+                                allocation to improve ROI by 18%.
+                            </p>
+                            <div class="card-tags">
+                                <span class="tag">Looker Studio</span>
+                                <span class="tag">Google Analytics</span>
+                                <span class="tag">Marketing</span>
+                            </div>
+                            <a href="projects.html#project-marketing" 
+                               class="card-link">
+                                View Case Study →
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Link to see all projects -->
+                <div class="section-cta">
+                    <a href="projects.html" class="btn btn-outline">
+                        View All Projects →
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════════ -->
+        <!-- SKILLS SECTION                              -->
+        <!-- ═══════════════════════════════════════════ -->
+        <section class="skills" aria-label="Technical skills">
+            <div class="section-container">
+                <h2 class="section-title">Skills & Tools</h2>
+
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>📊 Visualization</h3>
+                        <ul>
+                            <li>Tableau Desktop & Public</li>
+                            <li>Power BI Desktop & Service</li>
+                            <li>Google Looker Studio</li>
+                            <li>Excel Charts & Pivot Tables</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>💾 Data</h3>
+                        <ul>
+                            <li>SQL (PostgreSQL, MySQL)</li>
+                            <li>Python (Pandas, NumPy)</li>
+                            <li>Data Cleaning & ETL</li>
+                            <li>Google BigQuery</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>📈 Analysis</h3>
+                        <ul>
+                            <li>Statistical Analysis</li>
+                            <li>A/B Testing</li>
+                            <li>KPI Development</li>
+                            <li>Business Intelligence</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>🛠️ Other</h3>
+                        <ul>
+                            <li>Git & GitHub</li>
+                            <li>DAX & Calculated Fields</li>
+                            <li>Data Modeling</li>
+                            <li>Agile / Scrum</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- FOOTER                                      -->
+    <!-- ═══════════════════════════════════════════ -->
+    <footer class="footer" aria-label="Footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p class="footer-name">Your Name</p>
+                <p class="footer-role">Data Analyst & BI Developer</p>
+            </div>
+
+            <div class="footer-links">
+                <!--
+                  rel="noopener noreferrer"
+                  ─────────────────────────
+                  WHAT: Security attributes for external links.
+                  WHY:  
+                  - noopener: Prevents the linked page from accessing 
+                    your page via JavaScript (window.opener attack).
+                  - noreferrer: Prevents sending your URL as referrer 
+                    (privacy protection).
+                  ALWAYS use these on target="_blank" links!
+                -->
+                <a href="https://linkedin.com/in/yourprofile" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="LinkedIn Profile">
+                    LinkedIn
+                </a>
+                <a href="https://github.com/yourusername" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="GitHub Profile">
+                    GitHub
+                </a>
+                <a href="https://public.tableau.com/app/profile/yourprofile" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="Tableau Public Profile">
+                    Tableau Public
+                </a>
+                <a href="mailto:your-email@example.com" 
+                   aria-label="Send email">
+                    Email
+                </a>
+            </div>
+
+            <p class="footer-copyright">
+                © <span id="currentYear"></span> Your Name. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════ -->
+    <!-- JAVASCRIPT (loaded at end for performance)  -->
+    <!-- ═══════════════════════════════════════════ -->
+    <!--
+      WHAT: Load JS file at the bottom of body.
+      WHY:  HTML loads top-to-bottom. If JS is in <head>, 
+            the page appears blank while JS downloads.
+            Putting it at the bottom lets HTML/CSS render 
+            first, so users see content immediately.
+    -->
+    <script src="js/main.js"></script>
+</body>
+</html>
