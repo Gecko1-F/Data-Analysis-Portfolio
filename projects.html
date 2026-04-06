@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Security Headers (same as index.html) -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        frame-src https://public.tableau.com https://app.powerbi.com https://lookerstudio.google.com https://datastudio.google.com;
+        connect-src 'self' https://formsubmit.co;
+    ">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <title>Projects — Your Name | Data Analytics Portfolio</title>
+    <meta name="description" content="Data analytics projects featuring 
+        interactive Tableau, Power BI, and Looker Studio dashboards.">
+    
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation (same as index.html but "Projects" is active) -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Home">
+                <span class="logo-text">YN</span>
+                <span class="logo-full">Your Name</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link active" aria-current="page">Projects</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li><a href="docs/resume.pdf" class="nav-link nav-cta" target="_blank" rel="noopener noreferrer">Resume ↗</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="section-container">
+                <h1>Projects</h1>
+                <p>Detailed case studies of my data analytics work. 
+                   Each project includes the business problem, approach, 
+                   tools used, and key findings.</p>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- PROJECT 1: FULL CASE STUDY              -->
+        <!-- ═══════════════════════════════════════ -->
+        <!--
+          id="project-sales": This is an anchor link.
+          When someone clicks "View Case Study →" on the 
+          home page, it jumps directly to this section.
+        -->
+        <section class="project-detail" id="project-sales">
+            <div class="section-container">
+                <!-- Project Header -->
+                <div class="project-header">
+                    <span class="project-number">01</span>
+                    <h2>Sales Performance Dashboard</h2>
+                    <div class="project-meta">
+                        <span class="meta-tool">📊 Tableau</span>
+                        <span class="meta-date">January 2025</span>
+                        <span class="meta-duration">2 weeks</span>
+                    </div>
+                </div>
+
+                <!-- Case Study Content -->
+                <div class="case-study">
+                    <!--
+                      CASE STUDY FORMAT:
+                      This structure is based on what hiring managers 
+                      actually look for. Each section answers a 
+                      specific question they have.
+                    -->
+
+                    <div class="case-section">
+                        <h3>🎯 Business Problem</h3>
+                        <!--
+                          WHAT EMPLOYERS WANT TO SEE:
+                          That you understand business context,
+                          not just pretty charts.
+                        -->
+                        <p>
+                            A retail company with 4 regional offices had 
+                            declining visibility into their sales performance. 
+                            Monthly reports took 3 days to compile manually 
+                            from Excel spreadsheets, and leadership couldn't 
+                            identify underperforming segments in real-time.
+                        </p>
+                    </div>
+
+                    <div class="case-section">
+                        <h3>📊 Dataset</h3>
+                        <ul>
+                            <li><strong>Source:</strong> Kaggle Superstore Dataset 
+                                (modified)</li>
+                            <li><strong>Size:</strong> 9,994 transactions</li>
+                            <li><strong>Period:</strong> 2020–2023</li>
+                            <li><strong>Fields:</strong> 21 columns including 
+                                sales, profit, region, category, customer segment</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <h3>🔧 Approach & Process</h3>
+                        <ol>
+                            <li><strong>Data Cleaning:</strong> Removed 47 
+                                duplicate records and standardized date formats 
+                                using SQL</li>
+                            <li><strong>Data Modeling:</strong> Created 
+                                calculated fields for profit margin, YoY growth, 
+                                and running totals</li>
+                            <li><strong>Dashboard Design:</strong> Built 
+                                interactive dashboard with filters for region, 
+                                category, and time period</li>
+                            <li><strong>Insights Generation:</strong> Identified 
+                                key trends and formulated 3 actionable 
+                                recommendations</li>
+                        </ol>
+                    </div>
+
+                    <div class="case-section">
+                        <h3>💡 Key Findings</h3>
+                        <ul>
+                            <li>West region outperformed others by 23% in 
+                                profit margin</li>
+                            <li>Technology category showed highest growth 
+                                (31% YoY) but lowest margin (12%)</li>
+                            <li>Consumer segment represented 52% of revenue 
+                                but only 41% of profit</li>
+                            <li>Q4 consistently showed 2.3x average 
+                                daily sales vs. Q1</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <h3>🛠️ Tools Used</h3>
+                        <div class="tools-used">
+                            <span class="tool-badge">Tableau Desktop</span>
+                            <span class="tool-badge">SQL</span>
+                            <span class="tool-badge">Excel</span>
+                            <span class="tool-badge">Data Cleaning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ═══════════════════════════════════ -->
+                <!-- EMBEDDED DASHBOARD                   -->
+                <!-- ═══════════════════════════════════ -->
+                <!--
+                  🔴 PLACEHOLDER — You'll replace this in Phase 6
+                  
+                  For now, we put a screenshot image here.
+                  Later, we'll replace it with an actual 
+                  Tableau/Power BI embed.
+                -->
+                <div class="dashboard-embed" id="dashboard-sales">
+                    <h3>📊 Interactive Dashboard</h3>
+                    
+                    <!-- TEMPORARY: Screenshot placeholder -->
+                    <!-- Remove this <img> when you add the real embed -->
+                    <div class="dashboard-placeholder">
+                        <img src="images/projects/project1-full.webp" 
+                             alt="Sales Performance Dashboard - full screenshot"
+                             loading="lazy"
+                             width="1200"
+                             height="800">
+                        <p class="placeholder-note">
+                            ⬆️ Static screenshot — Interactive dashboard 
+                            coming soon
+                        </p>
+                    </div>
+
+                    <!-- 
+                      REAL EMBED GOES HERE (Phase 6)
+                      You'll uncomment and fill this in later:
+                    -->
+                    <!--
+                    <div class="dashboard-responsive-wrapper">
+                        <iframe 
+                            title="Sales Performance Dashboard - Interactive Tableau visualization"
+                            src="YOUR_TABLEAU_EMBED_URL_HERE"
+                            width="100%" 
+                            height="800"
+                            frameborder="0"
+                            loading="lazy"
+                            sandbox="allow-scripts allow-same-origin allow-popups"
+                            referrerpolicy="no-referrer">
+                        </iframe>
+                    </div>
+                    -->
+                </div>
+
+                <!-- Links to source -->
+                <div class="project-links">
+                    <a href="https://public.tableau.com/views/YourViz" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn btn-outline">
+                        View on Tableau Public ↗
+                    </a>
+                    <a href="https://github.com/yourusername/project-repo" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn btn-outline">
+                        View SQL Queries on GitHub ↗
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <hr class="project-divider">
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- PROJECT 2: SAME STRUCTURE               -->
+        <!-- ═══════════════════════════════════════ -->
+        <section class="project-detail" id="project-hr">
+            <div class="section-container">
+                <div class="project-header">
+                    <span class="project-number">02</span>
+                    <h2>HR Analytics Dashboard</h2>
+                    <div class="project-meta">
+                        <span class="meta-tool">📈 Power BI</span>
+                        <span class="meta-date">February 2025</span>
+                        <span class="meta-duration">3 weeks</span>
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <div class="case-section">
+                        <h3>🎯 Business Problem</h3>
+                        <p>
+                            An organization with 1,470 employees was 
+                            experiencing unexplained attrition. HR needed 
+                            a way to identify which departments and 
+                            demographics had the highest turnover risk.
+                        </p>
+                    </div>
+
+                    <div class="case-section">
+                        <h3>📊 Dataset</h3>
+                        <ul>
+                            <li><strong>Source:</strong> IBM HR Analytics 
+                                Employee Attrition Dataset</li>
+                            <li><strong>Size:</strong> 1,470 employee records</li>
+                            <li><strong>Fields:</strong> 35 attributes including 
+                                satisfaction scores, tenure, department, salary</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <h3>🔧 Approach & Process</h3>
+                        <ol>
+                            <li>Cleaned and transformed data using Power Query</li>
+                            <li>Built DAX measures for attrition rate, 
+                                average tenure, and satisfaction indices</li>
+                            <li>Created a multi-page report with executive 
+                                summary, departmental drill-down, and 
+                                demographic analysis</li>
+                        </ol>
+                    </div>
+
+                    <div class="case-section">
+                        <h3>💡 Key Findings</h3>
+                        <ul>
+                            <li>Remote workers had 34% higher retention rate</li>
+                            <li>Employees with &lt;2 years tenure had 3x 
+                                attrition rate</li>
+                            <li>Sales department had highest turnover at 21%</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-section">
+                        <h3>🛠️ Tools Used</h3>
+                        <div class="tools-used">
+                            <span class="tool-badge">Power BI</span>
+                            <span class="tool-badge">DAX</span>
+                            <span class="tool-badge">Power Query</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dashboard embed placeholder -->
+                <div class="dashboard-embed" id="dashboard-hr">
+                    <h3>📊 Interactive Dashboard</h3>
+                    <div class="dashboard-placeholder">
+                        <img src="images/projects/project2-full.webp" 
+                             alt="HR Analytics Dashboard - full screenshot"
+                             loading="lazy" width="1200" height="800">
+                        <p class="placeholder-note">
+                            ⬆️ Static screenshot — Interactive embed coming soon
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="#" class="btn btn-outline">View on Power BI ↗</a>
+                    <a href="#" class="btn btn-outline">View on GitHub ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <hr class="project-divider">
+
+        <!-- ═══════════════════════════════════════ -->
+        <!-- PROJECT 3: SAME STRUCTURE               -->
+        <!-- ═══════════════════════════════════════ -->
+        <section class="project-detail" id="project-marketing">
+            <div class="section-container">
+                <div class="project-header">
+                    <span class="project-number">03</span>
+                    <h2>Marketing ROI Report</h2>
+                    <div class="project-meta">
+                        <span class="meta-tool">📉 Looker Studio</span>
+                        <span class="meta-date">March 2025</span>
+                    </div>
+                </div>
+
+                <div class="case-study">
+                    <div class="case-section">
+                        <h3>🎯 Business Problem</h3>
+                        <p>
+                            A digital marketing team needed a centralized 
+                            report to track campaign performance across 
+                            Google Ads, social media, and email marketing 
+                            to optimize budget allocation.
+                        </p>
+                    </div>
+                    <!-- Add more case-section blocks as needed -->
+                </div>
+
+                <div class="dashboard-embed" id="dashboard-marketing">
+                    <h3>📊 Interactive Dashboard</h3>
+                    <div class="dashboard-placeholder">
+                        <img src="images/projects/project3-full.webp" 
+                             alt="Marketing ROI Dashboard - full screenshot"
+                             loading="lazy" width="1200" height="800">
+                        <p class="placeholder-note">
+                            ⬆️ Static screenshot — Interactive embed coming soon
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project-links">
+                    <a href="#" class="btn btn-outline">View on Looker Studio ↗</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="footer" aria-label="Footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p class="footer-name">Your Name</p>
+                <p class="footer-role">Data Analyst & BI Developer</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="mailto:your-email@example.com">Email</a>
+            </div>
+            <p class="footer-copyright">© <span id="currentYear"></span> Your Name</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
