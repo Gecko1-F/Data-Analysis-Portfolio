@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self';
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        frame-src https://public.tableau.com https://app.powerbi.com https://lookerstudio.google.com https://datastudio.google.com;
+        connect-src 'self' https://formsubmit.co;
+    ">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <title>Contact — Your Name | Data Analytics Portfolio</title>
+    <meta name="description" content="Get in touch with me for data analytics 
+        opportunities, collaborations, or questions.">
+    
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Main navigation">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" aria-label="Home">
+                <span class="logo-text">YN</span>
+                <span class="logo-full">Your Name</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+                <li><a href="docs/resume.pdf" class="nav-link nav-cta" target="_blank" rel="noopener noreferrer">Resume ↗</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="section-container">
+                <h1>Get In Touch</h1>
+                <p>Interested in working together? Have a question about 
+                   my projects? I'd love to hear from you.</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="section-container">
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-container">
+                        <!--
+                          ═══════════════════════════════════════
+                          FORMSUBMIT CONTACT FORM
+                          ═══════════════════════════════════════
+                          
+                          WHAT: FormSubmit.co is a free service that 
+                          receives form submissions and emails them to you.
+                          
+                          HOW IT WORKS:
+                          1. The form action URL includes your email
+                          2. When someone submits the form, FormSubmit 
+                             sends you an email with their message
+                          3. No backend code needed!
+                          
+                          SETUP (See Step 16 for details):
+                          Replace YOUR-EMAIL@example.com with your real email.
+                          First submission will require email verification.
+                          
+                          🔒 SECURITY FEATURES BUILT IN:
+                          - Honeypot field (catches bots)
+                          - CAPTCHA option available
+                          - Your email is NOT exposed in the HTML
+                            (FormSubmit hashes it after first use)
+                        -->
+                        <form action="https://formsubmit.co/YOUR-EMAIL@example.com" 
+                              method="POST"
+                              class="contact-form"
+                              id="contactForm">
+                            
+                            <!-- 
+                              HONEYPOT — Anti-spam measure
+                              ──────────────────────────────
+                              WHAT: A hidden field that humans won't see 
+                                    or fill in, but spam bots will.
+                              WHY:  If this field has a value, FormSubmit 
+                                    knows it's a bot and ignores the submission.
+                            -->
+                            <input type="text" name="_honey" style="display:none">
+                            
+                            <!-- Disable CAPTCHA (optional — remove if you want CAPTCHA) -->
+                            <input type="hidden" name="_captcha" value="false">
+                            
+                            <!-- Where to redirect after submission -->
+                            <input type="hidden" name="_next" 
+                                   value="https://yourusername.github.io/contact.html?sent=true">
+                            
+                            <!-- Subject line for the email you receive -->
+                            <input type="hidden" name="_subject" 
+                                   value="Portfolio Contact Form Submission">
+
+                            <div class="form-group">
+                                <label for="name">Name <span class="required">*</span></label>
+                                <input type="text" 
+                                       id="name" 
+                                       name="name" 
+                                       required 
+                                       autocomplete="name"
+                                       placeholder="Your full name"
+                                       minlength="2"
+                                       maxlength="100">
+                                <!--
+                                  required: Browser won't submit without this field
+                                  autocomplete: Browser can auto-fill from saved info
+                                  minlength/maxlength: Basic input validation
+                                -->
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email <span class="required">*</span></label>
+                                <input type="email" 
+                                       id="email" 
+                                       name="email" 
+                                       required 
+                                       autocomplete="email"
+                                       placeholder="your.email@example.com">
+                                <!--
+                                  type="email": Browser validates email format
+                                  (must have @ and domain)
+                                -->
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" 
+                                       id="subject" 
+                                       name="subject"
+                                       placeholder="What's this about?"
+                                       maxlength="200">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message <span class="required">*</span></label>
+                                <textarea id="message" 
+                                          name="message" 
+                                          required 
+                                          rows="6"
+                                          placeholder="Your message here..."
+                                          minlength="10"
+                                          maxlength="5000"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">
+                                Send Message
+                            </button>
+                        </form>
+
+                        <!-- Success message (shown via JavaScript after redirect) -->
+                        <div class="form-success" id="formSuccess" hidden>
+                            <p>✅ Thank you! Your message has been sent. 
+                               I'll get back to you soon.</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info Sidebar -->
+                    <div class="contact-info">
+                        <h3>Other Ways to Connect</h3>
+                        
+                        <div class="contact-method">
+                            <h4>📧 Email</h4>
+                            <a href="mailto:your-email@example.com">
+                                your-email@example.com
+                            </a>
+                        </div>
+
+                        <div class="contact-method">
+                            <h4>💼 LinkedIn</h4>
+                            <a href="https://linkedin.com/in/yourprofile" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                linkedin.com/in/yourprofile
+                            </a>
+                        </div>
+
+                        <div class="contact-method">
+                            <h4>🐙 GitHub</h4>
+                            <a href="https://github.com/yourusername" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                github.com/yourusername
+                            </a>
+                        </div>
+
+                        <div class="contact-method">
+                            <h4>📊 Tableau Public</h4>
+                            <a href="https://public.tableau.com/app/profile/yourprofile" 
+                               target="_blank" 
+                               rel="noopener noreferrer">
+                                My Tableau Profile
+                            </a>
+                        </div>
+
+                        <div class="contact-method">
+                            <h4>📍 Location</h4>
+                            <p>City, State (or "Remote")</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" aria-label="Footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <p class="footer-name">Your Name</p>
+                <p class="footer-role">Data Analyst & BI Developer</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="mailto:your-email@example.com">Email</a>
+            </div>
+            <p class="footer-copyright">© <span id="currentYear"></span> Your Name</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
