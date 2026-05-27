@@ -126,6 +126,9 @@
                 <!--<a href="mailto:your-email@example.com">Email</a>-->
             </div>
             <p class="footer-copyright">© <span id="currentYear"></span>. All rights reserved.</p>
+            <script>
+                document.getElementById('currentYear').textContent = new Date().getFullYear();
+                </script>
         </div>
     </footer>
 
