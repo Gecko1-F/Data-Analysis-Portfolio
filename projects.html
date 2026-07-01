@@ -76,10 +76,10 @@
                 <!-- Project Header -->
                 <div class="project-header">
                     <span class="project-number">01</span>
-                    <h2>Amazin Mart Sales </h2>
+                    <h2>Liquor Sales MX </h2>
                     <div class="project-meta">
                         <span class="meta-tool">📊 Tableau</span>
-                        <span class="meta-date">Completed: March 2026</span>
+                        <span class="meta-date">Completed: June 2026</span>
                 <!--        <span class="meta-duration">3 days</span>-->
                     </div>
                 </div>
@@ -108,12 +108,12 @@
                     <div class="case-section">
                         <h3>📊 Dataset</h3>
                         <ul>
-                            <li><strong>Source:</strong> AmazingMart EU Dataset (Originally sourced via Pavanjuturu/Tableau)
+                            <li><strong>Source:</strong> Liquor Sales MX
                                 </li>
-                            <li><strong>Size:</strong> 4,118 transactions</li>
-                            <li><strong>Period:</strong> 2011–2014</li>
-                            <li><strong>Fields:</strong> 10 columns including 
-                                Order Date, Customer Name, City, Country, Region, Segment, Ship Date, Ship Mode </li>
+                            <li><strong>Size:</strong> 5,718 transactions</li>
+                            <li><strong>Period:</strong> 04/2022</li>
+                            <li><strong>Fields:</strong> 33 columns including 
+                                Order Date, Customer ID, City, Country, Region, Product, SKU, Price, Cost, Revenue </li>
                         </ul>
                     </div>
 
@@ -124,23 +124,23 @@
                                 duplicate records and standardized date formats 
                                 using SQL</li>
                             <li><strong>Data Modeling:</strong> Created 
-                                calculated fields for profit margin & YoY growth</li>
+                                calculated fields for gross margin & net revenue</li>
                             <li><strong>Dashboard Design:</strong> Built 
                                 interactive dashboard with filters for region, 
-                                category, and time period to enable deep-dive root cause analysis.</li>
+                                category, and product sales to enable deep-dive root cause analysis.</li>
                             <li><strong>Insights Generation:</strong> Dug into the regional data to find out exactly why certain areas were losing money, 
-                                allowing me to pinpoint underperforming products and suggest areas where to focus.</li>
+                                allowing me to pinpoint underperforming locations and suggest areas where to focus.</li>
                         </ol>
                     </div>
 
                     <div class="case-section">
                         <h3>💡 Key Findings</h3>
                         <ul>
-                            <li><strong>Regional Performance:</strong> The United Kingdom led regional corporate profit growth, outperforming Germany by 4.76 percentage points.</li>
-                            <li><strong>Expansion:</strong> The Storage sub-category emerged as the top portfolio growth catalyst, averaging a robust 70.12% YoY increase while maintaining an 8.0% profit margin</li>
-                            <li><strong>Core Revenue Anchor:</strong> The Consumer Segment continues to anchor the business, commanding 52.0% of total revenue and delivering a strong, stable 12.0% profit margin.</li>
-                            <li><strong>Underperformance:</strong> The Tables sub-category represents a critical operational drain, 
-                                        consistently operating at a deficit with negative profit margins bottoming out at -29.48% and generating over $995,000 in cumulative net losses across the observed period.</li>
+                           <li><strong>Regional Performance:</strong> A significant portion of total revenue (82.92%) is concentrated within three key regions. Region 3 is the largest contributor at 35.39%, followed closely by Region 4 and Region 5, which account for 24.23% and 23.30% respectively </li>
+                            <li><strong>Channel</strong> Sales distribution is heavily concentrated in the Traditional channel at 90.45%, with Modeloramas representing the second-largest segment at 7.54%  </li>
+                            <li><strong>Product</strong> All four products demonstrated comparable performance. Peach liqueur generated the highest sales share at 27.84%, with strawberry liqueur following at 25.50%. Mango and pineapple contributed nearly equal shares at 23.49% and 23.17%, respectively.</li>
+                            <li><strong>Underperformance:</strong> Regions 1, 2, and 6 deliver marginal results, collectively accounting for just 14.11% of total sales. 
+                                Region 1 registers the lowest performance with a nominal 2.04% market share. A strategic review is recommended to determine if these underperforming figures are cyclical, constrained by limited marketing spend, or driven by regional consumer preferences and cultural habits.</li>
                         </ul>
                     </div>
 
@@ -178,7 +178,7 @@
                     <div class="dashboard-responsive-wrapper">
                         <iframe 
                             title="Sales Performance Dashboard - Interactive Tableau visualization"
-                            src="https://public.tableau.com/views/Dashboard_Portfolio3_3/AmazinMartDashboard?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link:embed=y&:display_count=no&:showVizHome=no"
+                            src="https://public.tableau.com/views/Licor_sales_Mx/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link:embed=y&:display_count=no&:showVizHome=no"
                             width="100%" 
                             height="800"
                             frameborder="0"
@@ -225,7 +225,7 @@
                 <div class="case-study">
                     <div class="case-section">
                         <h3>🎯 Business Case</h3>
-                        <p>
+                                                <p>
                             This dashboard models and estimates individual obesity risk across Mexico, Peru, and Colombia. 
                             By correlating behavioral dietary habits with physical fitness metrics, the project provides data-driven insights into regional health profiles, enabling healthcare stakeholders to identify high-risk lifestyle cohorts and optimize targeted wellness interventions.
                         </p>
@@ -274,8 +274,11 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- Dashboard embed placeholder -->
+                 <li style="list-style-type: none;">
+  <a href="docs/Executive_Presentation.pdf" class="nav-link nav-cta" target="_blank" rel="noopener noreferrer">Executive PDF ↗</a>
+</li>
                 <div class="dashboard-embed" id="dashboard-hr">
                     <h3>📊 Dashboard 1</h3>
                     <div class="dashboard-placeholder">
@@ -311,7 +314,7 @@
                         </p>
                     </div>
                 </div>
-
+                
 
               <!--  <div class="project-links">
                     <a href="#" class="btn btn-outline">View on Power BI ↗</a>
